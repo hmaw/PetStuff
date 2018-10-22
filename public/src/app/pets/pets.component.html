@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let pstuff of pets"> 
+      <tr>
+        <td> {{pstuff.name}}</td>
+        <td> {{pstuff.type}}</td>
+        
+
+        <td>
+            <button class="btn btn-outline-success float-right" [routerLink]="['/details', pstuff._id]">Details</button>
+            <button class="btn btn-outline-warning float-right" [routerLink]="['/edit', pstuff._id]">Edit</button>  
+
+      </tr>
+    </tbody>
+  </table> 

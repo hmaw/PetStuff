@@ -1,0 +1,21 @@
+
+  new pet
+
+<div class="form-group border border-secondary rounded col-6">
+    <form (submit)="addPets()">  
+      <h4>Know of a pet needing a home?</h4>
+      <p *ngIf="flash "style="color:red;" > {{flash}} </p>
+
+      <h4>Pet name:</h4><input type="text" class="form-control" name="newPets.name" [(ngModel)]="newPets.name" />
+      <h4>Pet type</h4><input type="text" class="form-control" name="newPets.type" [(ngModel)]="newPets.type" />
+      <h4>Description</h4><input type="text" class="form-control" name="newPets.desc" [(ngModel)]="newPets.desc" />
+      <h4>Skills: (optional):</h4>
+      <h4>Skill 1:</h4><input type="text" class="form-control" name="newPets.sk1" [(ngModel)]="newPets.sk1" />
+      <h4>Skill 2:</h4><input type="text" class="form-control" name="newPets.sk2" [(ngModel)]="newPets.sk2" />
+      <h4>Skill 3:</h4><input type="text" class="form-control" name="newPets.sk3" [(ngModel)]="newPets.sk3" />
+      
+      <input class="btn btn-outline-Info" type="submit" value="Add pet" />
+      <button class="btn btn-outline-danger"[routerLink]="['/details']">Cancel</button> 
+    </form>
+</div>
+

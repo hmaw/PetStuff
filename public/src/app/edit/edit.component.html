@@ -1,0 +1,21 @@
+
+edit works!
+
+
+<div class="form-group border border-secondary rounded col-6">
+    <form (submit)="editPet()"> 
+        <p *ngIf="flash "style="color:red;" > {{flash}} </p>
+      <!-- <p> {{ editPet | json }} </p> -->
+      <h4>Edit this Pet</h4>
+      <h4>Pet name:</h4><input type="text" class="form-control" name="pet.name" [(ngModel)]="pet.name" />
+      <h4>Pet type</h4><input type="text" class="form-control" name="pet.type" [(ngModel)]="pet.type" />
+      <h4>Description</h4><input type="text" class="form-control" name="pet.desc" [(ngModel)]="pet.desc" />
+      <h4>Skills: (optional):</h4>
+      <h4>Skill 1:</h4><input type="text" class="form-control" name="pet.sk1" [(ngModel)]="pet.sk1" />
+      <h4>Skill 2:</h4><input type="text" class="form-control" name="pet.sk2" [(ngModel)]="pet.sk2" />
+      <h4>Skill 3:</h4><input type="text" class="form-control" name="pet.sk3" [(ngModel)]="pet.sk3" />
+      
+      <input class="btn btn-outline-Info"type="submit" value="Edit pet" />
+      <button class="btn btn-outline-danger"[routerLink]="['/details']">Cancel</button> 
+    </form>
+</div>

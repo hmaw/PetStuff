@@ -1,0 +1,15 @@
+    
+<!-- <div *ngFor="let pstuff of pet">   -->
+        <p> Name: {{pet['name']}}</p>
+        <p> Type: {{pet['type']}}</p>
+        <p> Desc: {{pet['desc']}}</p>
+         <p> Skills:  </p>
+         <p> {{pet['sk1']}} </p>
+         <p>  {{pet['sk2']}} </p>
+         <p>  {{pet['sk3']}} </p>
+         <p>Likes: 17 </p>
+        
+        <button class="btn btn-outline-success float-right" (click)="delPet(pet['_id'])">Adopt this pet</button>
+        <button class="btn btn-outline-success float-right" [routerLink]="['/edit', pet['_id']]">Edit</button>  
+
+<!-- </div>   -->
